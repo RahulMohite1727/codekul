@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="alert alert-info">welcome to {{nm}} </div>
+    <div class="alert alert-primary">Welcome to {{nm.toUpperCase()}}</div>
+    <div class="alert alert-info">welcome to {{amount*5}}</div>
+
+    <input type="{{typ}}" class="{{cls}}" value="Login">
+
+    <div class="alert alert-info">Add {{num1+1}} </div>
+    <div class="alert alert-info">Add {{num1+num2}} </div>
+    <div class="alert alert-info">sub {{num1-num2}} </div>
+    <div class="alert alert-info">mul {{num1*num2}} </div>
+    <div class="alert alert-info">div {{num1/num2}} </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input [type]="'button'" [class]="cls" [value]="nm">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div [class.jumbotron]="true">codekul Angular 6 training</div>
+    <div [style.border] ="'1px solid red'">codekul Angular 7 training</div>
+    <div [attr.my]="'hello'">codekul Angular 6 training</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-warning" value="Click Me" (click)="clickMe($event)">
+  </div>
+</div>
