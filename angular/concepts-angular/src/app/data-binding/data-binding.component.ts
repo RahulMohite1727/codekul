@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Crd } from '../mx-crd/crd';
 
 @Component({
   selector: 'app-data-binding',
@@ -12,8 +13,14 @@ export class DataBindingComponent implements OnInit {
   amount = 100
   typ = 'button'
   cls = 'btn btn-primary'
+  anyThing: string
+  crd : Crd
+  ClkCrd : string
   constructor() {
-
+    this.crd = new Crd()
+    this.crd.imgUrl='https://www.traccar.org/images/server/feature-server.svg'
+    this.crd.ttl='server'
+    this.crd.msg=`Traccar software provides high performance and stability on Windows, Linux or any other platform. The server can be self-hosted in the cloud or on-premise. We also provide a number of hosted options with professional support.`
   }
 
   ngOnInit() {
@@ -22,5 +29,7 @@ export class DataBindingComponent implements OnInit {
     console.log('Clicked')
     console.log(ev)
   }
-
+onCardClick(crd : Crd) {
+  this.ClkCrd = crd.ttl
+}
 }
