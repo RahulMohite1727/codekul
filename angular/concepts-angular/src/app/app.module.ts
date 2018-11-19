@@ -15,6 +15,13 @@ import { LocRefComponent } from './loc-ref/loc-ref.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BarRatingModule } from "ngx-bar-rating";
+import { AlPrjComponent } from './loc-ref/al-prj.component';
+import { ZoomImgComponent } from './zoom-img/zoom-img.component';
+import { MoveBackgroundDirective } from './move-background.directive';
+import { ServicesComponent } from './services/services.component';
+import { AlcComponent } from './services/alc.component';
+import { DrpComponent } from './services/drp.component';
+
 
 
 
@@ -30,6 +37,13 @@ import { BarRatingModule } from "ngx-bar-rating";
     PrgBarComponent,
     BtnPnlComponent,
     LocRefComponent,
+    AlPrjComponent,
+    ZoomImgComponent,
+    MoveBackgroundDirective,
+    ServicesComponent,
+    AlcComponent,
+    DrpComponent,
+  
     
   ],
   imports: [

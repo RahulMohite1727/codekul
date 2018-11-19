@@ -12,7 +12,7 @@ export class BtnPnlComponent implements OnInit {
   
   @Output()
   onBtn : EventEmitter<number> = new EventEmitter()
-  btn: any;
+  // btn: any;
 
   constructor() { }
 

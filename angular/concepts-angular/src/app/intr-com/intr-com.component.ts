@@ -9,8 +9,8 @@ export class IntrComComponent implements OnInit {
 
   prg : number = 0 
   prgStr : string
-  btn:number
-  rate : number
+   btn:number
+   rate : number
   constructor() { }
 
   ngOnInit() {
