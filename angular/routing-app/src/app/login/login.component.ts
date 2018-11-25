@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   ) { }
   ngOnInit() {
   }
-   onLogin() {
+   onLogin( usNm : string, pass : string) {
   // web call to check user
-    this.router.navigate(['dash'])
+    this.router.navigate(['dash',usNm])
   }
 }
