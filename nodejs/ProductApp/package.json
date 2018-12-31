@@ -1,0 +1,28 @@
+{
+  "name": "crudopration",
+  "version": "1.0.0",
+  "description": "crud operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "create",
+    "read",
+    "update",
+    "delete",
+    "nodejs",
+    "mongoose"
+  ],
+  "author": "DrBuddy",
+  "license": "ISC",
+  "dependencies": {
+    "balanced-match": "^1.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.0-dev.20181229"
+  }
+}
