@@ -8,26 +8,29 @@
   <mat-card-header>
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
+  <form class="example-form" [formGroup]="loginForm">
+
   <mat-card-content>
-    <form class="example-form">
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            <input matInput placeholder="Email"  name="email" required formControlName="email">
             </mat-form-field>
           </td>
         </tr>
         <tr>    
         <td><mat-form-field class="example-full-width">
-          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+          <input matInput placeholder="Password" type="password" name="password" required formControlName="password">
         </mat-form-field></td>
       </tr></table>
-    </form>
+    <!-- </form> -->
     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button (click)="login()" color="primary">Login</button>
+    <button mat-raised-button routerLink="/reg" routerLinkActive="active" color="primary">Register</button>
   </mat-card-actions>
+</form>
 </mat-card>
 </div>

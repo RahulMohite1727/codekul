@@ -1,6 +1,8 @@
+import { LoginCredentials } from './usertable/user.model';
+
 import { Observable } from 'rxjs';
-import { User } from './usertable';
-import { HttpClient } from '@angular/common/http';
+import { User } from './user.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -8,11 +10,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
- private serviceUrl=""
-  constructor(private http: HttpClient) { }
 
-  grtUser():Observable<User[]>{
-    return this.http.get<User[]>(this.serviceUrl);
+ private serviceUrl="http://192.168.15.136:8080/getAllUser";
+ private loginUrl = 'http://192.168.15.136:8080/userLogin';
+ private regUrl = 'http://192.168.15.136:8080//registerUser';
+ 
+  constructor(private httpClient: HttpClient) { }
 
+  getUser():Observable<User[]>{
+    return this.httpClient.get<User[]>(this.serviceUrl);
   }
+
+  public loginUser(credentials:LoginCredentials){
+    return this.httpClient.post(this.loginUrl,credentials)
+  }
+ 
 }

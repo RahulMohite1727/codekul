@@ -1,16 +1,18 @@
+
 import { UserService } from './../user.service';
 
 import { Observable, from } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import {MatSort,MatSortModule,MatTabLabel} from '@angular/material';
+import {MatSort,MatSortModule,MatTabLabel, MatTableDataSource} from '@angular/material';
 import {Sort} from '@angular/material';
+import { user} from './Usertable';
 
 
 export interface user {
-  
   name: string;
-  username: string;
   email: string;
+  mobile: string;
+  password: string;
   }
 
 
@@ -21,24 +23,29 @@ export interface user {
 })
 export class UsertableComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'name', 'username', 'email'];
+  displayedColumns: string[] = [ 'name','email', 'mobile', 'password'];
   
   
   userinfo: user[] = [
-    {name: 'Rahul', username: 'Rahul', email: 'Rahul@gmail.com'},
-    {name: 'Tushar', username: 'Tushar', email: 'Tushar@gmail.com',},
-    {name: 'Eclair', username: 'Eclair', email:'Eclair@gmail.com'},
-    {name: 'Cupcake', username: 'Cupcake', email:'Cupcake@gmail.com'},
-    {name: 'Gingerbread', username: 'Gingerbread', email: 'Gingerbread@gmail.com'},
+    // {name: 'Rahul', username: 'Rahul', email: 'Rahul@gmail.com'},
+    // {name: 'Tushar', username: 'Tushar', email: 'Tushar@gmail.com',},
+    // {name: 'Eclair', username: 'Eclair', email:'Eclair@gmail.com'},
+    // {name: 'Cupcake', username: 'Cupcake', email:'Cupcake@gmail.com'},
+    // {name: 'Gingerbread', username: 'Gingerbread', email: 'Gingerbread@gmail.com'},
   ];
 
   sortedData: user[];
 
-  constructor() {
-    this.sortedData = this.userinfo.slice();
+  constructor(private UserService : UserService) {
+    // this.sortedData = this.userinfo.slice();
   }
   
   ngOnInit() {
+    this.UserService.getUser().subscribe(results =>{
+      if(results){
+        this.userinfo = results['data'];
+      }
+    })
   }
 
 
@@ -67,20 +74,6 @@ function compare(a: number | string, b: number | string, isAsc: boolean) {
 }
 
 
-  //displayedColums = ['name','username','email'];
-  // dataSource =[{
-  //   name:"OM",
-  //   username:"omkk",
-  //   email:"emil"
-  // }, {
-  //   name:"OM",
-  //   username:"omkk",
-  //   email:"emil"
-  // }, {
-  //   name:"OM",
-  //   username:"omkk",
-  //   email:"emil"
-  // }]
 
  
 

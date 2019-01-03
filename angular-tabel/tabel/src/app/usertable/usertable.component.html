@@ -1,15 +1,19 @@
 <table matSort (matSortChange)="sortData($event)">
     <tr>
       <th mat-sort-header="name">Name</th>
-      <th mat-sort-header="username">Username</th>
       <th mat-sort-header="email">Email</th>
+      <th mat-sort-header="mobile">Mobile</th>
+      <th mat-sort-header="password">Email</th>
       
     </tr>
   
-    <tr *ngFor="let user of sortedData">
-      <td>{{user.name}}</td>
-      <td>{{user.username}}</td>
+    <tr *ngFor="let user of userinfo">
+
+
+        <td>{{user.name}}</td>    
       <td>{{user.email}}</td>
+      <td>{{user.mobile}}</td>
+      <td>{{user.password}}</td>
      
     </tr>
   </table>

@@ -1,3 +1,36 @@
-<p>
-  registration works!
-</p>
+<div class="container" class="asign">
+    <mat-toolbar>
+      <span>Registration</span>
+    </mat-toolbar>
+    <mat-card class="my-card">
+      <mat-card-content>
+           
+        <form class="my-form">
+            <mat-form-field class="full-width">
+                <mat-label>username</mat-label>
+                <input  matInput  placeholder="First name"  name="fname"  required>
+             </mat-form-field>
+
+             <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input  matInput  placeholder="Email" name="email" required>
+             </mat-form-field>
+            
+             <mat-form-field class="full-width">
+                <mat-label>contact-number</mat-label>
+                <input  matInput  placeholder="contact-number" name="contact"  required>
+             </mat-form-field>
+            
+             <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input  matInput  placeholder="Password"  name="password" required>
+             </mat-form-field>
+      </form>
+    </mat-card-content>
+           
+    
+      <mat-card-actions>
+          <button mat-raised-button (click)="register()" color="primary">REGISTER</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
