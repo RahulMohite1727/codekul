@@ -11,25 +11,20 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
- private serviceUrl='http://192.168.15.136:8080/getAllUser';
+ private serviceUrl = 'http://192.168.15.136:8080/getAllUser';
  private loginUrl = 'http://192.168.15.136:8080/userLogin';
- private regUrl = 'http://192.168.15.136:8080//registerUser';
- 
-  constructor(private httpClient: HttpClient) { }
+ private regUrl = 'http://192.168.15.136:8080//registerUser'; 
+ constructor(private httpClient: HttpClient) { }
 
-  getUser():Observable<User[]>{
+  getUser(): Observable<User[]>{
     return this.httpClient.get<User[]>(this.serviceUrl);
   }
 
-  public loginUser(credentials:LoginCredentials){
-    return this.httpClient.post(this.loginUrl,credentials)
+  public loginUser(credentials: LoginCredentials) {
+    return this.httpClient.post(this.loginUrl, credentials);
   }
 
-  public regUser(credentials:RegCredentials){
-    return this.httpClient.post(this.regUrl,credentials)
+  public regUser(credentials: RegCredentials) {
+    return this.httpClient.post(this.regUrl, credentials);
   }
-
-
-  
- 
 }

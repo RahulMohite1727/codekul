@@ -26,13 +26,13 @@ export class UsertableComponent implements OnInit {
   sortedData: user[];
 
   constructor(private UserService : UserService) {
-    // this.sortedData = this.userinfo.slice();
+     this.sortedData = this.userinfo.slice();
   }
   
   ngOnInit() {
     this.UserService.getUser().subscribe(results =>{
       if(results){
-        this.userinfo = results['data'];
+        this.userinfo = results['List']['content'];
       }
     })
   }
@@ -45,7 +45,7 @@ export class UsertableComponent implements OnInit {
       return;
     }
 
-    this.sortedData = data.sort((a, b) => {
+    this.userinfo = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'userName': return compare(a.userName, b.userName, isAsc);
