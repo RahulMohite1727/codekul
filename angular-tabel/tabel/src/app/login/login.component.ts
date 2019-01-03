@@ -3,6 +3,8 @@ import { UserService } from './../user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -35,8 +37,9 @@ console.log(this.loginForm);
 
       this.userService.loginUser(credentials).subscribe(response => {
         if (response) {
-            console.log(response, "asdasdasdadasdda");
-            
+          this.router.navigate(['usertabel']);
+            console.log(response, "successful");
+
         }
       })
     }

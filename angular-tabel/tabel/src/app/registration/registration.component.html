@@ -1,36 +1,37 @@
-<div class="container" class="asign">
+<div class="container" class="assign">
     <mat-toolbar>
       <span>Registration</span>
     </mat-toolbar>
     <mat-card class="my-card">
+        <form class="my-form" [formGroup]="regForm">
       <mat-card-content>
-           
-        <form class="my-form">
             <mat-form-field class="full-width">
                 <mat-label>username</mat-label>
-                <input  matInput  placeholder="First name"  name="fname"  required>
+                <input  matInput  placeholder="name"  name="name"  required formControlName='userName'>
              </mat-form-field>
 
              <mat-form-field class="full-width">
               <mat-label>Email</mat-label>
-              <input  matInput  placeholder="Email" name="email" required>
+              <input  matInput  placeholder="Email" name="email" required formControlName='email'>
              </mat-form-field>
             
              <mat-form-field class="full-width">
                 <mat-label>contact-number</mat-label>
-                <input  matInput  placeholder="contact-number" name="contact"  required>
+                <input  matInput  placeholder="contact-number" name="contact"  required formControlName='contactNumber'>
              </mat-form-field>
             
              <mat-form-field class="full-width">
                 <mat-label>Password</mat-label>
-                <input  matInput  placeholder="Password"  name="password" required>
+                <input  matInput  placeholder="Password"  name="password" required formControlName='password'>
              </mat-form-field>
-      </form>
+     
     </mat-card-content>
            
     
       <mat-card-actions>
           <button mat-raised-button (click)="register()" color="primary">REGISTER</button>
       </mat-card-actions>
+
+    </form>
     </mat-card>
     </div>

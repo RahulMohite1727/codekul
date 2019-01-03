@@ -8,12 +8,7 @@ import {Sort} from '@angular/material';
 import { user} from './Usertable';
 
 
-export interface user {
-  name: string;
-  email: string;
-  mobile: string;
-  password: string;
-  }
+
 
 
   @Component({
@@ -23,16 +18,10 @@ export interface user {
 })
 export class UsertableComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'name','email', 'mobile', 'password'];
+  displayedColumns: string[] = ['userName','email', 'contactNumber', 'password'];
   
   
-  userinfo: user[] = [
-    // {name: 'Rahul', username: 'Rahul', email: 'Rahul@gmail.com'},
-    // {name: 'Tushar', username: 'Tushar', email: 'Tushar@gmail.com',},
-    // {name: 'Eclair', username: 'Eclair', email:'Eclair@gmail.com'},
-    // {name: 'Cupcake', username: 'Cupcake', email:'Cupcake@gmail.com'},
-    // {name: 'Gingerbread', username: 'Gingerbread', email: 'Gingerbread@gmail.com'},
-  ];
+  userinfo: user[] = [ ];
 
   sortedData: user[];
 
@@ -59,9 +48,12 @@ export class UsertableComponent implements OnInit {
     this.sortedData = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'username': return compare(a.username, b.username, isAsc);
+        case 'userName': return compare(a.userName, b.userName, isAsc);
         case 'email': return compare(a.email, b.email, isAsc);
+        case 'contactNumber': return compare(a.mobile, b.contactNumber, isAsc);
+        case 'password': return compare(a.password, b.password, isAsc);
+
+
       
         default: return 0;
       }
