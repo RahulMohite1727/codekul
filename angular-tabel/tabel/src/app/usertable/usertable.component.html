@@ -1,3 +1,4 @@
+<div>
 <table matSort (matSortChange)="sortData($event)">
     <tr>
       <th mat-sort-header="userName">Name</th>
@@ -8,13 +9,19 @@
     </tr>
   
     <tr *ngFor="let user of userinfo">
-
-
-        <td>{{user.userName}}</td>    
+      <td>{{user.userName}}</td>    
       <td>{{user.email}}</td>
       <td>{{user.contactNumber}}</td>
-      <td>{{user.password}}</td>
-     
+      <td>{{user.password}}</td>    
     </tr>
+    
+    <mat-paginator (page)="pageChange($event)" 
+    [pageSizeOptions]="[5,10,25,100]"
+    [pageSize]="5"
+    [length]="userAlldata?.totalElements"
+     [pageIndex]="0">
+    </mat-paginator>
   </table>
-  
+
+
+</div>

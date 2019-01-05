@@ -12,7 +12,10 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsertableComponent } from './usertable/usertable.component';
-import { MatSortModule,MatTableModule } from '@angular/material';
+import { MatSortModule,MatTableModule,  MatPaginatorModule,  MatButtonModule, MatCardModule, MatDialogModule, MatInputModule,
+  MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule, MatPaginator } from '@angular/material';
+import {NgbPaginationModule,NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
 
 
 @NgModule({
@@ -21,6 +24,8 @@ import { MatSortModule,MatTableModule } from '@angular/material';
     LoginComponent,
     RegistrationComponent,
     UsertableComponent,
+  
+     
 
   ],
   imports: [
@@ -33,7 +38,21 @@ import { MatSortModule,MatTableModule } from '@angular/material';
     HttpClientModule,
   
     BrowserAnimationsModule,
-    MatSortModule,MatTableModule
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatPaginatorModule,
+    MatToolbarModule,
+    MatButtonModule, 
+    MatCardModule,
+    MatInputModule,
+    MatDialogModule,
+    MatTableModule,
+    MatMenuModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    NgbPaginationModule,NgbAlertModule,
+
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

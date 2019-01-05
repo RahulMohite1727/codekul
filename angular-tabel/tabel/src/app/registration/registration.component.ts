@@ -4,11 +4,19 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { RegCredentials } from '../usertable/user.model';
+
+
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
+
+
+
+
+
 export class RegistrationComponent implements OnInit {
 
     public regForm: FormGroup;

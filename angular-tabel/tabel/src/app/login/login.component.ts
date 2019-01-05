@@ -3,6 +3,7 @@ import { UserService } from './../user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './user.model';
 
 
 @Component({
@@ -37,8 +38,13 @@ console.log(this.loginForm);
 
       this.userService.loginUser(credentials).subscribe(response => {
         if (response) {
-          this.router.navigate(['usertabel']);
-            console.log(response, "successful");
+          this.router.navigate(['/usertabel',credentials],{
+            queryParams:{'page': 0, 
+                         'size': 5,
+                         'sortOrder': 'DESC',
+                         'sortField': 'userName'}
+          });
+            console.log(response, 'successful');
 
         }
       })
