@@ -11,9 +11,9 @@ export class UserDataService {
 
   constructor(public httpClient: HttpClient) { }
 
-  getUser(){
-    return this.httpClient.get(this.serviceUrl)
-    }
+    getUser(){
+      return this.httpClient.get(this.serviceUrl)
+      }
 
   getParams(page) {
     return this.httpClient.get(this.serviceUrl, {
