@@ -1,0 +1,19 @@
+{
+  "name": "www.nodemongointegration.com",
+  "version": "0.0.1",
+  "description": "NodeJs + MongoDb Integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJs",
+    "MongoDb",
+    "Integration"
+  ],
+  "author": "Dr.Buddy",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}

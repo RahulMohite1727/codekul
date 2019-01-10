@@ -4,3 +4,16 @@
 .bg-light{
     background-color: #f8f9fa!important;
 }
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}

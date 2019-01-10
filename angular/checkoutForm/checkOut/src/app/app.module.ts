@@ -7,6 +7,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BillingAddComponent } from './billing-add/billing-add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,14 @@ import { BillingAddComponent } from './billing-add/billing-add.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,    
+    MatInputModule, 
+    MatButtonModule,
+    MatSelectModule,
+    MatIconModule,
+    MatRadioModule
+    
   
   ],
   providers: [CountryService],

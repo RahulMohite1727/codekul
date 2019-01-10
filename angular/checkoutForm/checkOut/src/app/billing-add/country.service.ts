@@ -6,10 +6,10 @@ import { checkCredentials } from './countryVal';
   providedIn: 'root'
 })
 export class CountryService {
-  private countryUrl = ''
-  private stateUrl = ''
+  private countryUrl = 'http://192.168.15.160:9090/getCountries';
+  private stateUrl = 'http://192.168.15.160:9090/getState/1';
 
-  private checkOutUrl = ''
+  private checkOutUrl = 'http://192.168.15.160:9090/addUser';
 
   constructor(
     private httpClient: HttpClient
@@ -17,6 +17,9 @@ export class CountryService {
 
   getCountry() {
     return this.httpClient.get(this.countryUrl)
+  }
+  getState(){
+    return this.httpClient.get(this.stateUrl)
   }
 
   // public checkOut(credentials: countryCredentials) {

@@ -1,28 +1,32 @@
 
 export interface checkCredentials{
-    countryVal:string
+    
 
-    firstName:string
+    fisrtName:string
       lastName:string
       userName:string
       email:string
-      addressOne:string
+      shippingAddressIs:string
+      saveTheInfoForNextTime:string
+        address: Address
+        payment:Payment
+}
+export interface Address{
+    addressOne:string
       addressTwo:string
       country:string
       state:string
       zip:string
-      sameAddress:string
-      saveInfo:string
-      paymentMethod:string
+     
+}
+export interface Payment{
+    payment:string
       
       
-      ccName:string
-      ccNumber:string
-      ccExpiration:string
-      ccCvv:string
+    nameOnCard:string
+    creditCardNumber:string
+    exipiration:string
+    cvv:string
 }
 
-export interface countryVal{
-    country:string
-    state:string
-}
+
