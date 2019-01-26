@@ -1,0 +1,87 @@
+<div class="container">
+  <form [formGroup]="rowAddDel">
+    <div class="row">
+      <div class="col-xs-12 form-group marL40">
+        <div style="margin-top:0px" formGroupName="itemRows">
+          <div class="row pannel-heading text-bpld" style="text-align:right;margin-top:0px;margin-left:10px;">
+            Form Details
+          </div>
+          <ng-container *ngIf="rowAddDel.controls.itemRows!=null">
+            <div *ngFor="let itemrow of rowAddDel?.controls?.itemRows?.controls; let i=index" [formGroupName]="i">
+              <div class="row">
+                <div class="col-md-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Make</mat-label>
+                    <mat-select placeholder="Make"formControlName="make">
+                      <mat-option *ngFor="let make of makes" [value]="make">
+                        {{make}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!rowAddDel.controls.make?.valid" class="help-block">Make Required</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Model</mat-label>
+                    <mat-select placeholder="Model"formControlName="model">
+                      <mat-option *ngFor="let model of models" [value]="model">
+                        {{model}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!rowAddDel.controls.model?.valid" class="help-block">Model Required</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>HP</mat-label>
+                    <mat-select placeholder="HP"formControlName="hp">
+                      <mat-option *ngFor="let hp of hps" [value]="hp">
+                        {{hp}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!rowAddDel.controls.hp?.valid" class="help-block">HP Required</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>	Year of Purchase</mat-label>
+                    <mat-select placeholder="Year of Purchase"formControlName="yearOfPurchase">
+                      <mat-option *ngFor="let yearOfPurchase of yearOfPurchases" [value]="yearOfPurchase">
+                        {{yearOfPurchase}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!rowAddDel.controls.yearOfPurchase?.valid" class="help-block">Year of Purchase Required</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field appearance="outline">
+                    <mat-label>	PTO Speed</mat-label>
+                    <mat-select placeholder="	PTO Speed"formControlName="ptoSpeed">
+                      <mat-option *ngFor="let ptoSpeed of ptoSpeeds" [value]="ptoSpeed">
+                        {{ptoSpeed}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!rowAddDel.controls.ptoSpeed?.valid" class="help-block">PTO Speed Required</mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-md-2 form-group">
+                  <button (click)="deletRow(i)" class="btn btn-danger">
+                  <b>-</b>
+                </button>
+                </div>
+              </div>
+
+            </div>
+          </ng-container>
+          <div class="form-group"style="text-align:right">
+            <button type="button"(click)="addNewRow()"class="btn btn-primary"><b>+</b></button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>

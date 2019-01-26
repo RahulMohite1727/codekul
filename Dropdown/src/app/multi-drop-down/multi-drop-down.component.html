@@ -1,0 +1,23 @@
+<div class="container">
+<form [formGroup]="userForm" novalidate style="border: 1px solid #ccc; padding: 10px;">
+  <div class="form-group">
+      <label for="name">Skills</label>
+     <angular2-multiselect [data]="dropdownList" [(ngModel)]="selectedItems" 
+                            [settings]="settings" 
+                            (onSelect)="onItemSelect($event)"
+                            (onDeSelect)="OnItemDeSelect($event)" 
+                            (onSelectAll)="onSelectAll($event)" 
+                            (onDeSelectAll)="onDeSelectAll($event)" formControlName="skills">
+      </angular2-multiselect>
+  </div>
+  <!-- <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+      <label for="name">Email Address</label>
+      <input class="form-control" formControlName="email">
+  </div> -->
+  <button (click)="submitForm()" [disabled]="!userForm.valid" class="btn btn-success btn-block">Submit</button>
+</form>
+</div>

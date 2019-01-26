@@ -18,8 +18,8 @@ export class UserService {
  
  constructor(private httpClient: HttpClient) { }
 
-  getUser(): Observable<User[]>{
-    return this.httpClient.get<User[]>(this.serviceUrl);
+  getUser(){
+    return this.httpClient.get(this.serviceUrl);
   }
 
   public loginUser(credentials: LoginCredentials) {
