@@ -1,0 +1,580 @@
+<div class="container-fluid main mt-4">
+
+
+  <div class="row"style=" display:flex;justify-content: space-between">
+
+    <img class="" src="../../assets/maschio-gaspardo-logo.jpg" style="width:220px; height:55px;    margin-left: 5px">
+    <div class="bg-img"style="background-image: url('../../assets/machio.png');   background-repeat: no-repeat;width: 59rem;">
+    <!-- <img class="" src="../assets/machio.png"> -->
+    <!-- <div class="col-10 offset-2 position-relative left-skew" style="background-color:#e60000; height: 80px;"> -->
+
+
+      <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark red accent-4" style="float:right; z-index: -1;" >
+        <links>
+          <div class="row"style="margin-left:10px">
+            <ul class="navbar-nav mr-auto" >
+              <li class="nav-item active"><a class="nav-link" style="color:white " href="#"> Name</a></li>
+              <li class="nav-item active"> <a class="nav-link" style="color:white" href="#"> Contact Us</a></li>
+              <li class="nav-item active"> <a class="nav-link" style="color:white" href="#"> Know Your
+                  Hierarchy</a></li>
+              <li class="nav-item active"> <a class="nav-link" style="color:white" href="#"> Download</a></li>
+              <li class="nav-item active"> <a class="nav-link" style="color:white" href="#"> Admin</a></li>
+            </ul>
+
+          </div>
+          <div class="row"style="float:right">
+            <p style="color:white;    margin-right: 7px;">Dealer Managment System</p>
+          </div>
+        </links>
+      </mdb-navbar>
+    </div>
+
+      <!-- <div class="first position-absolute"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+      <div class="four"></div>
+    </div>
+  </div>
+
+
+ <-- second nav -->
+  <div class="container-fluid main mt-1 secondNav">
+    <nav class="navbar-expand-lg navbar-light d-none d-md-block ">
+      <div class="row">
+         <div class="navmenu">
+          <!-- Masters -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="masters">Masters</button>
+          <mat-menu #masters="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- Pre-Sales -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="preSales">Pre-Sales</button>
+          <mat-menu #preSales="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- Sales -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="sales">Sales</button>
+          <mat-menu #sales="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- Event Management -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="eventManagement">Event Management</button>
+          <mat-menu #eventManagement="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- Reports -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="reports">Reports</button>
+          <mat-menu #reports="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+
+          <!-- Account satement -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="accountSatement">Account satement</button>
+          <mat-menu #accountSatement="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- DMS Helpdesk -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="DMSHelpdesk">DMS Helpdesk</button>
+          <mat-menu #DMSHelpdesk="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+          <!-- Export -->
+          <button mat-button class="navmenubutton btn-sm" [matMenuTriggerFor]="export">Export</button>
+          <mat-menu #export="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="item1">Item 1</button>
+            <button mat-menu-item [matMenuTriggerFor]="item2">Item 2</button>
+          </mat-menu>
+          <mat-menu #item1="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+            <button mat-menu-item>Birds</button>
+            <button mat-menu-item>Mammals</button>
+          </mat-menu>
+          <mat-menu #item2="matMenu">
+            <button mat-menu-item>Insects</button>
+            <button mat-menu-item>Molluscs</button>
+          </mat-menu>
+          <mat-menu #fish="matMenu">
+            <button mat-menu-item>Baikal oilfish</button>
+            <button mat-menu-item>Bala shark</button>
+          </mat-menu>
+
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- cards -->
+  
+
+ 
+</div>
+
+
+<div> 
+    <div class="container-fluid main mt-4">
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+          
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+          
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+          
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+         
+        </div>
+    </mat-grid-tile>
+   
+  </mat-grid-list>
+
+
+
+  <mat-grid-list cols="4" rowHeight="2:1">
+
+
+   <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+         
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+    
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+  
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="card">
+            
+        <mat-card>
+            <mat-card-header style="justify-content:center">
+              <h4>0</h4>
+              <!-- <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions> -->
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+  
+        </div>
+    </mat-grid-tile>
+
+    </mat-grid-list>
+
+
+
+
+    <mat-grid-list cols="4" rowHeight="2:1">
+      
+
+        <mat-grid-tile>
+            <div class="card">
+                
+            <mat-card>
+                <mat-card-header style="justify-content:center">
+                  <h4>0</h4>
+                  <!-- <mat-card-actions>
+                      <p>Enquiry Due For Follow Up</p>
+                    </mat-card-actions> -->
+                </mat-card-header>
+                <mat-card-content>
+                  <p><strong>Enquiry Due For Follow Up</strong></p>
+                </mat-card-content>
+              </mat-card>
+            
+            </div>
+        </mat-grid-tile>
+        
+      </mat-grid-list>
+  </div>
+</div>
+
+<!-- <div class="flex-container">
+    <div fxLayout="row wrap" 
+    fxLayout.lt-sm="column" 
+    fxLayoutGap="60px" 
+    fxLayoutAlign="flex-start">
+        <mat-card class="card-picture" *ngFor="let card of cards">
+          <mat-card-title fxFlex="1 1 calc(15% - 60px)"
+          fxFlex.lt-md="0 1 calc(50% - 60px)"
+          fxFlex.lt-sm="100%">
+              <mat-card-header style="justify-content:center">
+                  <h4>{{card.cardHead}}</h4>
+               </mat-card-header>
+              <mat-card-content>
+                  <p><strong>{{card.cardContent}}</strong></p>
+                </mat-card-content>
+          </mat-card-title>
+        </mat-card>
+      </div>
+</div> -->
+
+
+<div 
+  fxLayout="row wrap" 
+  fxLayout.lt-sm="column" 
+  fxLayoutGap="32px" 
+  fxLayoutAlign="flex-start">
+
+  
+
+		<app-cards 
+      fxFlex="0 1 calc(33.3% - 32px)"
+      fxFlex.lt-md="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="100%"
+    ></app-cards>
+
+</div>
+
+
+<!-- <div class="container-fluid main mt-4">
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>0</h4>
+              <mat-card-actions>
+                  <p>Enquiry Due For Follow Up</p>
+                </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p style="margin-left: 30px;
+              "><strong>Enquiry Due For Follow Up</strong></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>2</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>25</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>0</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>0</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>0</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>814</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>89</h4>
+              <mat-card-actions>
+
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-3">
+        <div class="card">
+          <mat-card>
+            <mat-card-header style="margin-left: 60px">
+              <h4>2</h4>
+              <mat-card-actions>
+                <p></p>
+              </mat-card-actions>
+            </mat-card-header>
+            <mat-card-content>
+              <p></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  
+  </div> -->

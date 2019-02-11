@@ -1,0 +1,27 @@
+
+
+
+  .navmenubutton{
+    width: 147px;
+    margin-right:5px;
+  }
+  .fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
+.navbar {
+  padding: 0px;
+            box-shadow: none;
+}
+
+::ng-deep mdb-navbar .navbar{
+  box-shadow: none;
+    padding: inherit;
+}
+
+.mat-grid-tile {
+  background: lightblue;
+}
+

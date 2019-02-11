@@ -1,0 +1,24 @@
+<div   
+gdAreas="header header | content "
+gdGap="10px"
+gdRows="auto auto auto"
+gdAreas.lt-md="header | content"
+gdRows.lt-md="auto auto auto auto">
+    <div fxLayout="row wrap" 
+    fxLayout.lt-sm="column" 
+    fxLayoutGap="60px" 
+    fxLayoutAlign="flex-start">
+        <mat-card class="card-picture" *ngFor="let card of cards">
+          <mat-card-title fxFlex="0 1 calc(25% - 60px)"
+          fxFlex.lt-md="0 1 calc(50% - 60px)"
+          fxFlex.lt-sm="100%">
+              <mat-card-header style="justify-content:center">
+                  <h4 gdAreas="header">{{card.cardHead}}</h4>
+               </mat-card-header>
+              <mat-card-content>
+                  <p><strong gdAreas="content">{{card.cardContent}}</strong></p>
+                </mat-card-content>
+          </mat-card-title>
+        </mat-card>
+      </div>
+</div>
